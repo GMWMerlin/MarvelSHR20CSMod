@@ -32,8 +32,11 @@
         <h3>Character Data</h3>
             <div class="sheet-box">
                 <div class="sheet-doublerow">
-                    <div class="sheet-baseinfo sheet-topline sheet-fiftypercent"><input type="text" name="attr_name" /><label>Hero Name</label></div>
-                    <div class="sheet-baseinfo sheet-topline sheet-fiftypercent">
+                    <tr>
+                        <td><div class="sheet-baseinfo sheet-topline sheet-fortyfivepercent"><input type="text" name="attr_name" /><label>Hero Name</label></div></td>
+                        <td><div class="sheet-baseinfo sheet-topline sheet-fortyfivepercent"><input type="text" name="attr_PublicName" /><label>Public Name (if different)</label></div></td>
+                    </tr>
+                            <div class="sheet-baseinfo sheet-topline sheet-fiftypercent">
                                 <select name="attr_Form">
                                     <option value="Char_Blank"></option>
                                     <option value="Normal_Human">Normal Human</option>
@@ -79,31 +82,32 @@
                                     <option value="Compund_form">Compound_Form</option>
                                 </select>
                                 <label>Form</label></div>
-                </div>
-                <div class="sheet-doublerow">
-                    <div class="sheet-baseinfo sheet-topline sheet-fiftypercent">
-                                <select name="attr_Origin">
-                                    <option value="Origin_Blank"></option>
-                                    <option value="Alien">Alien</option>
-                                    <option value="Mutant">Mutant</option>
-                                    <option value="High Tech">High Tech</option>
-                                    <option value="Robot">Robot</option>
-                                    <option value="Altered Human">Altered Human</option>
-                                    <option value="Natal">Natural</option>
-                                    <option value="Maturity">Maturity</option>
-                                    <option value="Self-Achievement">Self-Achievement</option>
-                                    <option value="Endowment">Endowment</option>
-                                    <option value="Technical_Mishap">Technical Mishap</option>
-                                    <option value="Technical_Procedure">Technical Procedure</option>
-                                    <option value="Creation">Creation</option>
-                                    <option value="Biological_Exposure">Biological Exposure</option>
-                                    <option value="Chmical_Exposure">Chemical Exposure</option>
-                                    <option value="Energy_Exposure">Energy Exposure</option>
-                                    <option value="Rebirth">Rebirth</option>
-                                </select>
-                                <label>Origin</label>
-                    </div>
-                </div>
+                            </div>
+                            <br /><br /><br />
+                        <div class="sheet-doublerow">
+                            <div class="sheet-baseinfo sheet-topline sheet-fiftypercent">
+                                    <select name="attr_Origin">
+                                        <option value="Origin_Blank"></option>
+                                        <option value="Alien">Alien</option>
+                                        <option value="Mutant">Mutant</option>
+                                        <option value="High Tech">High Tech</option>
+                                        <option value="Robot">Robot</option>
+                                        <option value="Altered Human">Altered Human</option>
+                                        <option value="Natal">Natural</option>
+                                        <option value="Maturity">Maturity</option>
+                                        <option value="Self-Achievement">Self-Achievement</option>
+                                        <option value="Endowment">Endowment</option>
+                                        <option value="Technical_Mishap">Technical Mishap</option>
+                                        <option value="Technical_Procedure">Technical Procedure</option>
+                                        <option value="Creation">Creation</option>
+                                        <option value="Biological_Exposure">Biological Exposure</option>
+                                        <option value="Chmical_Exposure">Chemical Exposure</option>
+                                        <option value="Energy_Exposure">Energy Exposure</option>
+                                        <option value="Rebirth">Rebirth</option>
+                                    </select>
+                                    <label>Origin</label>
+                            </div>
+                        </div>
                 <div class="sheet-doublerow">
                     <div class="sheet-baseinfo sheet-topline sheet-sixteenpercent"><input type="text" name="attr_Hair" /><label>Hair</label></div>
                     <div class="sheet-baseinfo sheet-topline sheet-sixteenpercent"><input type="text" name="attr_Skin" /><label>Skin</label></div>
@@ -125,9 +129,6 @@
                 </div>
                 <div class="sheet-doublerow">
     		        <div class="sheet-baseinfo sheet-topline sheet-thirtypercent"><input type="text" name="attr_Occupation" /><label>Occupation</label></div>
-		        </div>
-		        <div class="sheet-doublerow">
-    		        <div class="sheet-item sheet-biggest"><input type="text" name="attr_PublicName" /><label>Public Name (if different from Hero Name)</label></div>
 		        </div>
 		        <div class="sheet-doublerow">
 		            <div class="sheet-item sheet-med">
@@ -177,31 +178,9 @@
                         <div class="sheet-header">
                             <div class="sheet-item sheet-puny"></div>
                             <div class="sheet-item sheet-small"><label>Attribute</label></div>
-                            <div class="sheet-item sheet-small"><label>InitialRoll</label></div>
+                            <div class="sheet-item sheet-small"><label></label></div>
                             <div class="sheet-item sheet-med"><label>Rank</label></div>
                             <div class="sheet-item sheet-small"><label>Value</label></div>
-                        </div>
-                        <div class="sheet-row">
-                            <div class="sheet-item sheet-puny"></div>
-                            <div class="sheet-item sheet-small"><label>Karma Used:</label></div>
-                            <tr>
-                                <td>
-                                    <div class="sheet-item sheet-med">
-                                        <select name="attr_KarmaUsed">
-                                            <option value="0">0</option>
-                                            <option value="10">10</option>
-                                            <option value="15">15</option>
-                                            <option value="20">20</option>
-                                            <option value="25">25</option>
-                                            <option value="30">30</option>
-                                            <option value="35">35</option>
-                                            <option value="40">40</option>
-                                        </select>
-                                    </div>
-                                </td>
-                                <div class="sheet-item sheet-small"><input type="number" name="attr_KarmaLeft" value="(@{Karma}+@{KarmaPool})" disabled="true" /></div>
-                            </tr>
-                                
                         </div>
                         <div class="sheet-row">
                             <div class="sheet-item sheet-puny"></div>
@@ -375,7 +354,7 @@
 									<option value="CL5000">Class 5000</option>
 									<option value="Beyond">Beyond</option>
                                 </select></div>
-                            <div class="sheet-item sheet-small"><input type="number" name="attr_Intuition" value="@Intuition"/></div>
+                            <div class="sheet-item sheet-small"><input type="number" name="attr_Intuition" value="@Intuition" /></div>
                         </div>
                         <div class="sheet-row">
                             <div class="sheet-item sheet-puny"></div>
@@ -479,10 +458,8 @@
                                             <option value="4">+4</option>
                                             <option value="5">+5</option>
                                             <option value="6">+6</option>
-                                            <option value="7">+7</option>
-                                            <option value="8">+8</option>
-                                            <option value="9">+9</option>
-                                        </select>
+                                       </select>
+                                       <!-- <input type="number" name="attr_InitModifier" value="@InitModifier" /> -->
                                     </div>
                                 </td>
                                 <td>
@@ -491,6 +468,28 @@
                                     </div>
                                 </td>
                             </tr> 
+                        </div>
+                        <div class="sheet-row">
+                            <div class="sheet-item sheet-puny"></div>
+                            <div class="sheet-item sheet-small"><label>Karma Used:</label></div>
+                            <tr>
+                                <td>
+                                    <div class="sheet-item sheet-med">
+                                        <select name="attr_KarmaUsed">
+                                            <option value="0">0</option>
+                                            <option value="10">10</option>
+                                            <option value="15">15</option>
+                                            <option value="20">20</option>
+                                            <option value="25">25</option>
+                                            <option value="30">30</option>
+                                            <option value="35">35</option>
+                                            <option value="40">40</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <div class="sheet-item sheet-small"><input type="number" name="attr_KarmaLeft" value="(@{Karma}+@{KarmaPool})" disabled="true" /></div>
+                            </tr>
+                                
                         </div>
                     </div>
         </div>
@@ -627,7 +626,19 @@
                                 <div class="sheet-item sheet-small"><input type="number" name="attr_karmaneeded" value="@KarmaNeeded"/></div>
                             </td>
                         </tr>
+                <div class="sheet-row">
+                    <div class="sheet-item sheet-puny"></div>        
+                        <tr>
+                            <td>
+                                <div class="sheet-item sheet-small"><label>Left to get:</label></div>
+                            </td>
+                            <td>
+                                <div class="sheet-item sheet-small"><input type="number" name="attr_KarmaAdvToGet" value="(@{KarmaNeeded}-@{KarmaSaved})" disabled="true" /></div>
+                            </td>
+                        </tr>
                     </div>
+                    </div>
+                    <br /><br />
                 <h3>Karma Advancement Fund Item</h3>
                 <textarea class="sheet-textarea" name="attr_karmaadvfunditem" value="@KarmaAdvFundItem"></textarea>
             </div>    
@@ -669,6 +680,10 @@
                     </div>
                     <div class="sheet-item sheet-small"><input type="number" name="attr_StuntRank" /></div>
                 </div>
+                <div class="sheet-row">
+                    <textarea name="attr_StuntNotes" title="repeating_StuntsHave_notes">Notes</textarea>
+                </div>
+                <br /><br /><br /><br />
             </fieldset>
         </div>
     </div>
@@ -687,10 +702,11 @@
                     <div class="sheet-item sheet-small"><input type="number" name="attr_StuntWAttempt" /></div>
                 </div>
                 <div class="sheet-row">
-                    <div class="sheet-item sheet-med"><label>Notes:</label></div>
-                    <div class="sheet-item sheet-bigger"><input type="text" name="attr_StuntsWNotes" /></div>
+                    <textarea name="attr_StuntsWNotes" title="repeating_StuntsWant_notes">Notes</textarea>
                 </div>
+                <br /><br /><br /><br />
             </fieldset>
         </div>
     </div>
 </div>
+
